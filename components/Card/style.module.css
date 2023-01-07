@@ -5,36 +5,37 @@
       auto-fill,
       minmax(max(250px, calc((100% - 1rem * 2) / var(--rows))), 1fr)
     );
-  }
-  
-  .card img {
+}
+
+.card img {
     -webkit-user-drag: none;
-  }
-  
-  .card:hover svg {
+}
+
+.card:hover svg {
     color: currentColor;
-  }
-  
-  .card svg {
+}
+
+.card svg {
     width: 1.5rem;
     color: #00000033;
     transition: color 0.3s ease;
-  }
-  
-  .card p {
+}
+
+.card p {
     margin-top: 0.5rem;
-  }
-  
-  .card .title {
+}
+
+.card .title {
     display: flex;
     font-weight: 600;
     align-items: flex-start;
-  }
-  
-  :global(.dark) .card svg {
+}
+
+:global(.dark) .card svg {
     color: #ffffff66;
-  }
-  :global(.dark) .card:hover svg {
+}
+
+:global(.dark) .card:hover svg {
     color: currentColor;
-  }
+}
   

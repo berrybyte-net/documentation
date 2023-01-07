@@ -1,9 +1,7 @@
 {
     "index": "Introduction",
     "plugins": "Plugins",
-    "common-errors": "Common Errors",
+    "common-errors": "Common errors",
     "aikars-flags": "Aikar's Flags",
-    "installing-modpacks": "Installing Modpacks",
-    "updating": "Updating Jars",
-    "optimize": "Server Optimization"
+    "updating": "Updating JARs"
 }

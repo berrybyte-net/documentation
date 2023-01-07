@@ -1,6 +1,7 @@
 {
-    "overview": "Overview",
+    "index": "Overview",
     "backups": "Backups",
-    "importing-files": "Importing Files",
-    "recyclebin": "Recycle Bin"
+    "importing-files": "Importing files",
+    "recycle-bin": "Recycle Bin",
+    "sub-users": "Sub-users"
 }

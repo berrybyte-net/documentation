@@ -1,11 +1,11 @@
-import type { ReactElement } from 'react'
-import type { AppProps } from 'next/app'
+import type { ReactElement } from 'react';
+import type { AppProps } from 'next/app';
 
-import '../style.css'
+import '../style.css';
 
 export default function Nextra({
-  Component,
-  pageProps
+    Component,
+    pageProps
 }: AppProps): ReactElement {
-  return <Component {...pageProps} />
+    return <Component {...pageProps} />;
 }

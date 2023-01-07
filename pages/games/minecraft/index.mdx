@@ -1,40 +1,20 @@
-# Minecraft Server Hosting
+import { Card, Cards } from 'components/Card';
+import { Spark } from 'components/icons/Spark';
 
-Use our extensive guides and documentation on running a Minecraft server. Our articles show you how to develop using our game server control panel: Lime; however steps can be recreated yourself.
+# Hosting a Minecraft server
 
-To order a Minecraft server and get started within minutes at [berrybyte.net/minecraft](https://berrybyte.net/minecraft) 
+This category contains extensive guides on running a Minecraft server from scratch and with our control panel Lime.
 
-import { Card, Cards } from '@components/Card'
+Get started within minutes at [berrybyte.net/minecraft](https://berrybyte.net/minecraft).
 
-Check out the list of articles/guides:
+## Articles
 
 <Cards>
-  <Card icon={<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
-  <path fillRule="evenodd" d="M14.615 1.595a.75.75 0 01.359.852L12.982 9.75h7.268a.75.75 0 01.548 1.262l-10.5 11.25a.75.75 0 01-1.272-.71l1.992-7.302H3.75a.75.75 0 01-.548-1.262l10.5-11.25a.75.75 0 01.913-.143z" clipRule="evenodd" />
-</svg>
-} title="Aikar's Flags" href="/games/minecraft/aikars-flags"/>
-  <Card icon={<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
-  <path fillRule="evenodd" d="M14.615 1.595a.75.75 0 01.359.852L12.982 9.75h7.268a.75.75 0 01.548 1.262l-10.5 11.25a.75.75 0 01-1.272-.71l1.992-7.302H3.75a.75.75 0 01-.548-1.262l10.5-11.25a.75.75 0 01.913-.143z" clipRule="evenodd" />
-</svg>
-} title="Installing Modpacks" href="/games/minecraft/installing-modpacks"/>
-  <Card icon={<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
-  <path fillRule="evenodd" d="M14.615 1.595a.75.75 0 01.359.852L12.982 9.75h7.268a.75.75 0 01.548 1.262l-10.5 11.25a.75.75 0 01-1.272-.71l1.992-7.302H3.75a.75.75 0 01-.548-1.262l10.5-11.25a.75.75 0 01.913-.143z" clipRule="evenodd" />
-</svg>
-} title="Updating Your Server" href="/games/minecraft/updating-jars"/>
-  <Card icon={<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
-  <path fillRule="evenodd" d="M14.615 1.595a.75.75 0 01.359.852L12.982 9.75h7.268a.75.75 0 01.548 1.262l-10.5 11.25a.75.75 0 01-1.272-.71l1.992-7.302H3.75a.75.75 0 01-.548-1.262l10.5-11.25a.75.75 0 01.913-.143z" clipRule="evenodd" />
-</svg>
-} title="Server Optimization" href="/games/minecraft/optimize"/>
-  <Card icon={<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
-  <path fillRule="evenodd" d="M14.615 1.595a.75.75 0 01.359.852L12.982 9.75h7.268a.75.75 0 01.548 1.262l-10.5 11.25a.75.75 0 01-1.272-.71l1.992-7.302H3.75a.75.75 0 01-.548-1.262l10.5-11.25a.75.75 0 01.913-.143z" clipRule="evenodd" />
-</svg>} title="Chunky (Pregen Worlds)" href="/games/minecraft/plugins/chunky"/>
-  <Card icon={<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
-  <path fillRule="evenodd" d="M14.615 1.595a.75.75 0 01.359.852L12.982 9.75h7.268a.75.75 0 01.548 1.262l-10.5 11.25a.75.75 0 01-1.272-.71l1.992-7.302H3.75a.75.75 0 01-.548-1.262l10.5-11.25a.75.75 0 01.913-.143z" clipRule="evenodd" />
-</svg>} title="Dynmap (Live Map)" href="/games/minecraft/plugins/dynmap"/>
-  <Card icon={<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
-  <path fillRule="evenodd" d="M14.615 1.595a.75.75 0 01.359.852L12.982 9.75h7.268a.75.75 0 01.548 1.262l-10.5 11.25a.75.75 0 01-1.272-.71l1.992-7.302H3.75a.75.75 0 01-.548-1.262l10.5-11.25a.75.75 0 01.913-.143z" clipRule="evenodd" />
-</svg>} title="Changing Versions" href="/games/minecraft/versions"/>
-  <Card icon={<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
-  <path fillRule="evenodd" d="M14.615 1.595a.75.75 0 01.359.852L12.982 9.75h7.268a.75.75 0 01.548 1.262l-10.5 11.25a.75.75 0 01-1.272-.71l1.992-7.302H3.75a.75.75 0 01-.548-1.262l10.5-11.25a.75.75 0 01.913-.143z" clipRule="evenodd" />
-</svg>} title="PlaceHolder" href="/games/minecraft/placeholder"/>
+    <Card icon={<Spark className="w-6 h-6"/>} title="Aikar's Flags" href="/games/minecraft/aikars-flags"/>
+    <Card icon={<Spark className="w-6 h-6"/>} title="Installing modpacks" href="/games/minecraft/installing-modpacks"/>
+    <Card icon={<Spark className="w-6 h-6"/>} title="Updating your server" href="/games/minecraft/updating-jars"/>
+    <Card icon={<Spark className="w-6 h-6"/>} title="Server optimization" href="/games/minecraft/optimize"/>
+    <Card icon={<Spark className="w-6 h-6"/>} title="Chunky (world pre-generation)" href="/games/minecraft/plugins/chunky"/>
+    <Card icon={<Spark className="w-6 h-6"/>} title="Dynmap (live map)" href="/games/minecraft/plugins/dynmap"/>
+    <Card icon={<Spark className="w-6 h-6"/>} title="Changing versions" href="/games/minecraft/versions"/>
 </Cards>

@@ -1,7 +1,7 @@
 {
-  "name": "nextra-docs-template",
+  "name": "documentation",
   "version": "0.0.1",
-  "description": "Nextra docs template",
+  "description": "Public community-written documentation for all game/virtual server related topics",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shuding/nextra-docs-template.git"
+    "url": "git+https://github.com/berrybyte-net/documentation.git"
   },
-  "author": "Shu Ding <g@shud.in>",
+  "author": "Shu Ding <g@shud.in>, BerryByte",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/shuding/nextra-docs-template/issues"
+    "url": "https://github.com/berrybyte-net/documentation/issues"
   },
-  "homepage": "https://github.com/shuding/nextra-docs-template#readme",
+  "homepage": "https://github.com/berrybyte-net/documentation",
   "dependencies": {
     "@headlessui/react": "^1.7.7",
     "clsx": "^1.2.1",
@@ -27,6 +27,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@napi-rs/simple-git-linux-x64-gnu": "^0.1.8",
     "@types/node": "18.11.15",
     "autoprefixer": "^10.4.13",
     "postcss": "^8.4.19",
