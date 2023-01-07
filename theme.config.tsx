@@ -24,8 +24,8 @@ const config: DocsThemeConfig = {
     head: (
     <>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta property="og:title" content="Nextra" />
-      <meta property="og:description" content="The next site builder" />
+      <meta property="og:title" content="BerryByte Docs" />
+      <meta property="og:description" content="A public community-written documentation for all game-server/virtual server related topics. " />
     </>
   ),
   primaryHue: 332,
