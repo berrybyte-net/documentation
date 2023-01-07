@@ -15,7 +15,13 @@ const config: DocsThemeConfig = {
   },
   sidebar: {
       defaultMenuCollapseLevel: 0
-    }
+    },
+    useNextSeoProps() {
+      return {
+        titleTemplate: '%s – BerryByte Docs',
+      }
+    },
   }
+  
 
 export default config
