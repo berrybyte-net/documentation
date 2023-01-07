@@ -1,0 +1,37 @@
+import GuideCard from 'components/GuideCard/index.tsx';
+import { Callout } from 'nextra-theme-docs'
+ 
+<Callout type="warning" emoji="⚠️">
+  This documentation is a work-in-progress. There may be errors or typos in the guides, however we are working constantly (as a community) to improve them.
+</Callout>
+
+# Getting Started
+ 
+Welcome to the BerryByte documentation website. This site contains useful guides & tips on how to run various types of Game Servers (including Rust, Minecraft, and more to come!), as well as running Virtual Servers (VPS). This guide is built for BerryByte users, however the same guides can be replicated on other systems.
+
+## Contributing
+We are always welcome for users who would like to contribute into building this documentation and knowledgebase to an extensive directory for server owners and administrators. Head to our [GitHub repository](https://github.com/berrybyte-net/docs) for instructions to contribute.
+
+
+## Specific Guides
+<div className="flex flex-col md:flex-row gap-3 flex-basis-100 cards-guide">
+    <GuideCard
+        name="Rust"
+        to="/games/rust">
+        <>![Rust](http://localhost:3000/images/rust-hero.png)</>
+    </GuideCard>
+    <GuideCard
+        name="Minecraft"
+        to="/games/minecraft">
+        <>![Minecraft](http://localhost:3000/images/mc-hero.png)</>
+    </GuideCard>
+        <GuideCard
+        name="Virtual Servers"
+        to="/vps/">
+        <>![VPS](https://berrybyte.net/images/10E18FA5-6772-44A5-9879-38197ACF8122.jpg)</>
+    </GuideCard>
+</div>
+
+<Callout type="info" emoji="ℹ️">
+  Note: If you are ever lost or would like to look for something specific, use the search bar on the top right, or `CTRL + K`, or get in touch with our [Discord community](https://discord.gg/Wc9wMZxQ2D).
+</Callout>

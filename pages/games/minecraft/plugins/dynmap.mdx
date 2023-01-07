@@ -1,0 +1,98 @@
+---
+  title: "Dynmap"
+  description: "A guide to use Dynmap to create and view a live map of your Minecraft server."
+---
+
+# Dynmap Documentation Guide
+
+Dynmap is a plugin for Bukkit-based Minecraft servers that allows players to view a live map of the server world. There are more optimized alternatives like [Bluemap](/bluemap.mdx) and [SquareMap](/squaremap.mdx), but Dynmap is still a popular choice for many Minecraft servers.
+This guide will walk you through the installation and use of Dynmap on your Minecraft server!
+
+## Installing Dynmap
+
+To install Dynmap on your Minecraft server, follow these steps:
+
+    1) Download the latest version of Dynmap from the [Spigot page](https://www.spigotmc.org/resources/dynmap%C2%AE.274/).
+    2) Place the downloaded `.jar` file in the plugins folder of your Minecraft server.
+    3) Start the server. The plugin will automatically be installed and activated.
+    4) When the server has fully started, stop the server.
+    5) Head to the Network tab and create an Allocation that can be used for Dynmap. This will be the port Dynmap runs on.
+    6) Navigate to the `/plugins/dynmap` folder in your server's directory.
+    7) Edit the `configuration.txt` file and set the port to the one created in the 5th step, and a URL path you want to use for the Dynmap web interface (e.g. /dynmap). Make sure to save the file.
+    8) Start the server again. Dynmap will now be fully installed and configured.
+
+## Using Proxies to use a custom domain
+
+If you have a BerryByte Minecraft server, we've simplified all steps below to a few buttons on BerryByte [Lime](../../lime/overview.md), where you can easily setup a reverse proxy for Dynmap using the [Proxies Manager](../../lime/proxies.md) tool. We take care of SSL certificates and all the configuration for you.
+
+1. Create a DNS record for your custom domain to point to `cotton.api.berrybyte.net`. If you're using Cloudflare, make sure to set the proxy status to DNS only.
+2. In the Network tab, create a port/allocation for Dynmap and take note of the number.
+3. Head to the [Proxies Manager](../../lime/proxies.md) tool and click on the "Create Proxy" button.
+4. In `Source`, input the domain used in step 1. In `Allocation`, input the allocation you created in step 2, and press **Create**.
+
+Head to your domain and it should be all ready and configured!
+
+## Using a domain for Dynmap (Advanced)
+
+To use a domain for the map of your Minecraft server and you do not have a BerryByte server, you'll need to setup a reverse proxy. This will allow you to access the Dynmap web interface using a custom domain name, instead of the server's IP address. A reverse proxy is a server that sits in front of your Minecraft server and directs incoming traffic to the appropriate server. It can be used to provide an additional layer of security and to allow you to use a custom domain for the plugin.
+
+All the steps stated below after the 2nd step have been simplified to a single command for your convenience:
+ ```bash copy
+ wget https://cdn.berrybyte.net/scripts/dynmap.sh && chmod +x dynmap.sh && ./dynmap.sh
+ ```
+
+### To create a reverse proxy for Dynmap on a custom domain, follow these steps:
+
+    1. Set up a server to act as the reverse proxy. This can be a dedicated physical or virtual machine, or it can be a public cloud provider. For a simple virtual machine, order one at https://berrybyte.net/vps.
+
+    2. Install a web server on the machine which you intend to run the reverse proxy on (e.g. Nginx, Apache, etc.)
+
+    ```bash copy
+    sudo apt update
+    sudo apt-get -y install nginx
+    ```
+
+    3. Set up a DNS record for your custom domain to point to the IP address of the reverse proxy server. This will allow users to access Dynmap using your custom domain instead of the IP address of the server.
+
+    4. Configure the web server on the reverse proxy server to act as the proxy for Dynmap. This will involve adding a configuration block to the web server's configuration file that specifies the custom domain you want to use for Dynmap and the IP address and port of the Minecraft server where Dynmap is running.
+
+    ```nginx copy
+server {                                                                                                                                                   
+        server_name your-domain.com;                                                                                                                                    
+        listen 80;                                                                                                                                                
+        listen [::]:80;                                                                                                                                           
+        access_log /var/log/nginx/reverse-access.log;                                                                                                             
+        error_log /var/log/nginx/reverse-error.log;                                                                                                               
+        location / {                                                                                                                                              
+                    proxy_pass http://YOUR-IP-ADDRESS;                                                                                                                      
+  }                                                                                                                                                               
+} 
+    ```
+
+    5. Restart the web server to apply the changes.
+
+    6. Test the reverse proxy by accessing Dynmap using your custom domain.
+
+Note that setting up a reverse proxy can be a complex process, and it is recommended that you have some experience with web servers and network configuration before attempting it. If you are unfamiliar with these topics, it may be helpful to seek the assistance of a qualified system administrator or engineer.
+
+## Using Dynmap
+
+To view the Dynmap map, open a web browser and go to the IP address of the server, followed by the port and the webprefix path - if you've set one - in the configuration file (e.g. http://yourdomain.com:20029/dynmap); this will launch Dynmap's web interface!
+
+On the left side of the interface, you will see a list of available maps. You can switch between these maps using the dropdown menu at the top. On the right side of the interface, you will see a list of players currently online on the server. You can click on a player's name to view their location on the map. You can also use the search bar at the top of the interface to search for specific locations or players on the map.
+
+## Customizing Dynmap
+
+Dynmap has a wide range of customization options, which can be accessed by clicking on the "Configure Dynmap" button at the top of the web interface. From here, you can adjust settings such as the map's zoom level, the visibility of players and markers on the map, and the appearance of the map itself.
+
+For more advanced customization options, you can edit the configuration.txt file in the plugins/dynmap folder on your server. This file contains detailed documentation for all available customization options.
+
+## Troubleshooting
+
+If you are having trouble using Dynmap, here are a few common issues and their solutions:
+
+    - If the Dynmap web interface is not loading, check the `server.log` file in the logs folder of your server for any error messages related to Dynmap. This can help identify the cause of the issue.
+    - If the map is not showing the correct area, check the `worlds.txt` file in the plugins/dynmap folder to ensure that the correct world is being mapped.
+    - If the map is not updating in real-time, check the `updaterate` option in the configuration.txt file. This setting determines how often the map is updated, and can be adjusted as needed.
+
+If you continue to experience issues with Dynmap, you can ask for help on the [BerryByte's Discord Community](https://discord.com/invite/Pv8DMpXtma)!
