@@ -11,7 +11,7 @@ const config: DocsThemeConfig = {
   },
   docsRepositoryBase: 'https://github.com/berrybyte-net/documentation/tree/main/',
   footer: {
-    text: '© 2022 BerryByte Limited. All rights reserved. Built with lots of coffee and love 💖',
+    text: '© 2022 BerryByte Limited and contributers. All rights reserved. Built with lots of coffee and love 💖',
   },
   sidebar: {
       defaultMenuCollapseLevel: 0
