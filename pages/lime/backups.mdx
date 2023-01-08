@@ -16,10 +16,10 @@ To take things even further, we've added additional functionality to the normal 
 ## Creating
 
 To create a 1:1 copy of your server to store safely, head to https://game.berrybyte.net/`server-id`/backups, replacing the `server-id` value with your own. This is found beside the IP address and the server software text opposite the power controls.
-<img src="/images/backups/1.png" alt="Backup 1"/>
+<img className="mt-3" src="/images/backups/1.png" alt="Backup 1"/>
 
 Below the description of the backup system, you can find a button named **Create Backup**, which will open a modal with information you can fill out:
-<img src="/images/backups/2.png" alt="Backup 2"/>
+<img className="mt-3" src="/images/backups/2.png" alt="Backup 2"/>
 
 - `Backup name`: Name it something memorable, or alternatively you can leave this empty which will be autofilled with a timestamp.
 - `Ignored Files & Directories`: If there are any files or folders you would like to ignore and not take a backup of, list them here. You will need to enter the path of the directory/file relative to the main directory, e.g. `/plugins/Dynmap/*`. This ignores all files inside the `Dynmap` directory.
@@ -35,7 +35,7 @@ Now that you've created some backups, and you have a situation where you need to
 
 Restoring backups is as easy as pressing two buttons! You can press the three dots on the backup you would like to restore, and a modal will pop up asking you whether you would like to delete all files before restoring the backup. If selected, this **CANNOT** be reversed, so restore at your own risk. An advice would be to take a backup of the server before restoring it if you are unsure whether it may fix or break it.
 
-<img src="/images/backups/3.png" alt="Backup 3"/>
+<img className="mt-3" src="/images/backups/3.png" alt="Backup 3"/>
 
 ## Mounting
 
@@ -47,11 +47,11 @@ All these reasons inspired us to create a **Backup Mounter**. This feature allow
   During the process of a mounted backup, you may not be able to run power controls or do similar tasks until it is unmounted.
 </Callout>
 
-<img src="/images/backups/4.png" alt="Mount Backup"/>
+<img className="mt-3" src="/images/backups/4.png" alt="Mount Backup"/>
 
 To mount a backup, press the three dots on the backup you would like to mount, and it will mount the backup in your file manager.
 
-<img src="/images/backups/5.png" alt="Mounted Backup"/>
+<img className="mt-3" src="/images/backups/5.png" alt="Mounted Backup"/>
 
 To unmount the backup, press the icon on the mounted backup folder inside the file manager, and it will unmount the backup for you.
 Now, you can simply go into the folder, select the specific files you want to restore and either press `Restore` which restores the file/folder back to its relative directory in the server, or `Move` which allows you to restore the file/folder to a different directory - use the `../` path before the file/folder, in the popup modal, you're wanting to restore to, to move out of the mounted backup folder and restore to a custom path.
