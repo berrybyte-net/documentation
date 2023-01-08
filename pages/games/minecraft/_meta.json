@@ -3,5 +3,7 @@
     "plugins": "Plugins",
     "common-errors": "Common errors",
     "aikars-flags": "Aikar's Flags",
-    "updating": "Updating JARs"
+    "updating": "Updating JARs",
+    "installing-modpacks": "Installing Modpacks",
+    "changing-versions": "Changing Versions"
 }
